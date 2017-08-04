@@ -41,3 +41,7 @@ The directory structure of your new project looks like this:
 |-- uiucthesis2014.log
 `-- uiucthesis2014.sty
 ```
+
+## References
+
+[UIUC graduate college thesis formatting guidelines](http://www.grad.illinois.edu/thesis/format)
