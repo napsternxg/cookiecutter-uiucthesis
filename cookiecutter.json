@@ -1,0 +1,11 @@
+{
+  "full_name": "Shubhanshu Mishra",
+  "email": "email@email.com",
+  "github_username": "napsternxg",
+  "thesis_title": "Your thesis title",
+  "dir_name": "my_thesis",
+  "_copy_without_render": [
+    "uiucthesis2014.*",
+    "Makefile"
+  ]
+}
