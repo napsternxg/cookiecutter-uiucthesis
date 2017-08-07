@@ -200,7 +200,12 @@
 % volume.
 %
 % Here's how to produce an example similar to that in \cite{Handbook}.
+% In order to use figures from the figures directory you need to include the graphicx package
+% as well as include the graphics path of figures directory. 
 % \begin{quote} \hrule \begin{verbatim}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
 \begin{document}
 
 \title{Coffee Consumption of Graduate Students \\
@@ -441,6 +446,9 @@ How does this relate to coffee? We direct the reader to \cite{Trembly98}, \cite{
 \include{3-model}
 \include{4-predictions}
 
+\chapter{Visualizations}
+\input{chapters/thesis-ex/introduction}
+
 \chapter{Conclusions}
 
 We conclude that graduate students like coffee.
@@ -498,6 +506,65 @@ We conclude that graduate students like coffee.
 %
 % \iffalse
 %</example>
+% \fi
+%
+% Following lines gives an example of a sample include file with a figure
+% and table which can be used as a chapter template.
+% \iffalse
+%<*exchapter>
+% \fi
+% \begin{quote} \hrule \begin{verbatim}
+\section{Introduction}
+\label{viz-introduction}
+
+This is a sample block of data $y = \phi(w, x)$. 
+The visualization is an example of this curve as shown in figure \ref{fig:viz-intro-curve}. 
+
+\begin{figure}[!htb]
+  \centering
+  \caption{A simple visualization of a parametric curve of  $y = \phi(w, x)$}
+  \label{fig:viz-intro-curve}
+  \includegraphics[width=0.5\linewidth]{thesis-ex/viz-intro-curve}
+\end{figure}
+
+More details can be found in table \ref{tbl:row-col-merged}
+\input{tables/thesis-ex/row-col-merged}
+
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%</exchapter>
+% \fi
+%
+% Following lines gives an example of a sample include file 
+% which can be used as a table template.
+% \iffalse
+%<*extable>
+% \fi
+% \begin{quote} \hrule \begin{verbatim}
+\begin{table}[!h]
+  \centering
+  \caption{This is a sample table to show how tables are done.}
+  \label{tbl:row-col-merged}
+  \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+   \hline
+   \multicolumn{4}{|c|}{Country List} \\
+   \hline
+   Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 Code&ISO numeric Code\\
+   \hline
+   Afghanistan   & AF    &AFG&   004\\
+   Aland Islands&   AX  & ALA   &248\\
+   Albania &AL & ALB&  008\\
+   Algeria    &DZ & DZA&  012\\
+   American Samoa&   AS  & ASM&016\\
+   Andorra& AD  & AND   &020\\
+   Angola& AO  & AGO&024\\
+   \hline
+  \end{tabular}
+\end{table}
+
+% \end{verbatim} \hrule \end{quote}
+% \iffalse
+%</extable>
 % \fi
 %
 % \section{User Customization}

@@ -25,6 +25,10 @@ bib:
 
 
 files:
+	mkdir -p chapters/thesis-ex
+	mkdir -p figures/thesis-ex
+	mkdir -p tables/thesis-ex
+	cp thesis-ex-assets/* figures/thesis-ex
 	latex ${PACKAGE}.ins
 
 doc:
@@ -62,5 +66,8 @@ cleanall: clean
 	rm -f ${PACKAGE}.dvi
 	rm -f ${PACKAGE}.pdf
 	rm -f thesis-ex.*
+	rm -rf chapters/thesis-ex
+	rm -rf tables/thesis-ex
+	rm -rf figures/thesis-ex
 
 
